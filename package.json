@@ -1,0 +1,26 @@
+{
+  "name": "pizzeria_unit_testing",
+  "version": "1.0.0",
+  "description": "XP. Unit testing parametrs and tests API",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha -R spec test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allawitte/xpw7.git"
+  },
+  "keywords": [
+    "XP",
+    "unit-testing",
+    "tests-naming",
+    "tests-structure",
+    "js"
+  ],
+  "author": "All Witte",
+  "devDependencies": {
+    "mocha": "~2.4.5",
+    "chai": "~3.5.0",
+    "chai-http": "~2.0.1"
+  }
+}
+
