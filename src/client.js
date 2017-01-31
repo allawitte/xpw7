@@ -3,9 +3,10 @@ class Client {
     constructor(name, birthday){
         this._name = name;
         this._birthday = birthday;
+        this._bonus = 0;
     }
     addToBonusAccount(value){
-
+        this._bonus += value;
     }
     useFromBonusAccount(vlue){
 
