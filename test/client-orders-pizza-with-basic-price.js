@@ -1,7 +1,7 @@
 'use strict';
 var expect = require('chai').expect;
 var Pizzeria = require('../src/pizzeria');
-describe('When client orders one pizza per basic price', function () {
+describe('When client orders pizza per basic price', function () {
     var pizzeria = {};
     beforeEach(function () {
         pizzeria = new Pizzeria();
@@ -26,7 +26,27 @@ describe('When client orders one pizza per basic price', function () {
         });
 
     });
+
+    describe('I ordered few pizzas per basic price', function(){
+        var ordersCases = [
+            {askedItem: ['01', '02'], givenInvoice: 500},
+            {askedItem: ['01','02','03'], givenInvoice: 750},
+            {askedItem: ['01','02','03','04'], givenInvoice: 1100},
+            {askedItem: ['01','02','03','04','05'], givenInvoice: 1450}
+        ];
+
+        ordersCases.forEach(item => {
+            it('Pizzeria gives invoice ' + item.givenInvoice + ' rub', function () {
+                var iOrderItem = item.askedItem;
+                var receivedInvoice = pizzeria.calculateBasicPrice(iOrderItem);
+                expect(receivedInvoice).is.equal(item.givenInvoice);
+            });
+
+        });
+    })
 });
+
+
 /**
  * Created by HP on 1/30/2017.
  */
