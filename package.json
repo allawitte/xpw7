@@ -18,9 +18,9 @@
   ],
   "author": "All Witte",
   "devDependencies": {
-    "mocha": "~2.4.5",
     "chai": "~3.5.0",
-    "chai-http": "~2.0.1"
+    "chai-http": "~2.0.1",
+    "expect": "^1.20.2",
+    "mocha": "~2.4.5"
   }
 }
-
