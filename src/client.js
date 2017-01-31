@@ -5,16 +5,17 @@ class Client {
         this._birthday = birthday;
         this._bonus = 0;
     }
-    addToBonusAccount(value){
-        this._bonus += value;
+    calculateBonus(value){
+       return  value*5/100;
     }
     useFromBonusAccount(vlue){
 
     }
     get birthday(){
+        
         return {
-            day: this._birthday.slice(0,3),
-            month: this._birthday.slice(4,6)
+            day: this._birthday.slice(0,2),
+            month: this._birthday.slice(3,5)
         }
     }
 }

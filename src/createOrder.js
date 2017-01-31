@@ -2,7 +2,7 @@
 var Client = require('./client');
 var Pizzeria = require('./pizzeria');
 class createOrder {
-    cretePizzeria(){
+    createPizzeria(){
         return new Pizzeria();
     }
     createClient(name, birthday){
@@ -22,6 +22,7 @@ class createOrder {
         }
     }
 }
+module.exports = createOrder;
 /**
  * Created by HP on 1/30/2017.
  */
